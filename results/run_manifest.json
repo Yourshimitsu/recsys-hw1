@@ -1,0 +1,24 @@
+{
+  "completed": true,
+  "code_sha256": "3861dd9919701cea6c178603d81d320ab21f3b84e2ea702f6722d230fa6ee369",
+  "seed": 42,
+  "primary_metric": "ndcg_at_10",
+  "versions": {
+    "numpy": "2.3.3",
+    "scipy": "1.16.2",
+    "pandas": "2.3.2",
+    "matplotlib": "3.10.6",
+    "numba": "0.64.0",
+    "torch": "2.7.1+cu128",
+    "nbformat": "5.10.4",
+    "nbclient": "0.10.2",
+    "orjson": "3.13.0"
+  },
+  "python": "3.12.10",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "fm_device": "cpu",
+  "threads": 4,
+  "created_at_utc": "2026-10-16T12:41:48.802895+00:00",
+  "source_archive_count": 912,
+  "test_used_after_selection": true
+}

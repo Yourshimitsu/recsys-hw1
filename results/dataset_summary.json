@@ -1,0 +1,338 @@
+{
+  "dataset_name": "GH Archive public stars September-October 2014",
+  "source": "https://www.gharchive.org/",
+  "config_sha256": "7170469f7e80fd3e93f303ba041ac65f422ffec1426a223ff0a94ab358809a43",
+  "preprocessing_sha256": "522b9880c5d3346df859faa28956e92b2ab8336921254e5894346bb64bd26afa",
+  "source_file_date_start": "2014-09-01",
+  "source_file_date_end_inclusive": "2014-10-08",
+  "source_selection_note": "The initial October 1-8 interval yielded only 27314 final cohort pairs. The source interval was expanded backward to calendar-month boundary September 1 before any model evaluation, while preserving train/validation cutoffs and all cohort filters.",
+  "source_hours": 912,
+  "source_compressed_bytes": 8609254076,
+  "source_fingerprint_sha256": "945abf592069b58c67501878e7184c793ee917e5a980779b9041289ef637602d",
+  "extraction_spec": {
+    "schema_version": 1,
+    "event_type": "WatchEvent",
+    "event_action": "started"
+  },
+  "empty_source_hour_count": 2,
+  "empty_source_hours": [
+    "2014-09-23-12",
+    "2014-09-30-14"
+  ],
+  "raw": {
+    "retained_star_events": 1282609,
+    "unique_user_item_pairs": 1265965,
+    "duplicate_star_events": 16644,
+    "unique_users": 260949,
+    "unique_items": 259736,
+    "raw_events": 15194184,
+    "watch_events": 1282614,
+    "with_language": 1188449,
+    "with_owner": 1282609,
+    "missing_identity_or_time": 5,
+    "invalid_json": 0
+  },
+  "event_time_start_utc": "2014-09-01T07:05:35Z",
+  "event_time_end_utc": "2014-10-09T07:05:30Z",
+  "train_cutoff_utc": "2014-10-06T00:00:00Z",
+  "validation_cutoff_utc": "2014-10-07T00:00:00Z",
+  "split_rule": "train timestamp < train cutoff; validation train cutoff <= timestamp < validation cutoff; test timestamp >= validation cutoff",
+  "deduplication": "one positive per user/repository, at earliest observed timestamp across the full source interval",
+  "catalog_selection": "top items by training-only frequency; ties broken by historical repository ID; then iterative training-only user/item minimum-degree filtering",
+  "min_train_user_interactions": 3,
+  "min_train_item_interactions": 5,
+  "max_items": 3000,
+  "filter_iterations": 4,
+  "n_users": 46083,
+  "n_items": 2995,
+  "n_interactions": 386338,
+  "splits": {
+    "train": {
+      "raw_unique_pairs": 1141620,
+      "dropped_unknown_item": 362205,
+      "dropped_unknown_user": 417208,
+      "kept_pairs": 362207
+    },
+    "validation": {
+      "raw_unique_pairs": 33911,
+      "kept_pairs": 7010,
+      "dropped_unknown_user": 16068,
+      "dropped_unknown_item": 10833
+    },
+    "test": {
+      "raw_unique_pairs": 90434,
+      "dropped_unknown_item": 30623,
+      "dropped_unknown_user": 42690,
+      "kept_pairs": 17121
+    }
+  },
+  "density_train": 0.0026243349763367015,
+  "language_categories_including_unknown": 50,
+  "owner_categories_including_unknown": 2415,
+  "items_missing_language": 141,
+  "items_missing_owner": 0,
+  "language_distribution": [
+    {
+      "language": "JavaScript",
+      "n_items": 928,
+      "train_interactions": 122738
+    },
+    {
+      "language": "Java",
+      "n_items": 283,
+      "train_interactions": 29388
+    },
+    {
+      "language": "Objective-C",
+      "n_items": 222,
+      "train_interactions": 25472
+    },
+    {
+      "language": "CSS",
+      "n_items": 152,
+      "train_interactions": 24833
+    },
+    {
+      "language": "unknown",
+      "n_items": 141,
+      "train_interactions": 23581
+    },
+    {
+      "language": "Python",
+      "n_items": 213,
+      "train_interactions": 23111
+    },
+    {
+      "language": "Ruby",
+      "n_items": 198,
+      "train_interactions": 18792
+    },
+    {
+      "language": "Go",
+      "n_items": 126,
+      "train_interactions": 16769
+    },
+    {
+      "language": "C",
+      "n_items": 120,
+      "train_interactions": 15528
+    },
+    {
+      "language": "PHP",
+      "n_items": 144,
+      "train_interactions": 11431
+    },
+    {
+      "language": "Shell",
+      "n_items": 79,
+      "train_interactions": 10702
+    },
+    {
+      "language": "C++",
+      "n_items": 88,
+      "train_interactions": 9647
+    },
+    {
+      "language": "Swift",
+      "n_items": 52,
+      "train_interactions": 6423
+    },
+    {
+      "language": "CoffeeScript",
+      "n_items": 49,
+      "train_interactions": 6300
+    },
+    {
+      "language": "VimL",
+      "n_items": 31,
+      "train_interactions": 3405
+    },
+    {
+      "language": "C#",
+      "n_items": 34,
+      "train_interactions": 2563
+    },
+    {
+      "language": "Clojure",
+      "n_items": 28,
+      "train_interactions": 2298
+    },
+    {
+      "language": "Scala",
+      "n_items": 27,
+      "train_interactions": 1921
+    },
+    {
+      "language": "OCaml",
+      "n_items": 3,
+      "train_interactions": 1016
+    },
+    {
+      "language": "Rust",
+      "n_items": 7,
+      "train_interactions": 868
+    },
+    {
+      "language": "Haskell",
+      "n_items": 8,
+      "train_interactions": 772
+    },
+    {
+      "language": "TeX",
+      "n_items": 7,
+      "train_interactions": 512
+    },
+    {
+      "language": "R",
+      "n_items": 10,
+      "train_interactions": 477
+    },
+    {
+      "language": "XSLT",
+      "n_items": 2,
+      "train_interactions": 412
+    },
+    {
+      "language": "Elixir",
+      "n_items": 2,
+      "train_interactions": 351
+    },
+    {
+      "language": "Assembly",
+      "n_items": 2,
+      "train_interactions": 280
+    },
+    {
+      "language": "Haxe",
+      "n_items": 1,
+      "train_interactions": 280
+    },
+    {
+      "language": "TypeScript",
+      "n_items": 3,
+      "train_interactions": 276
+    },
+    {
+      "language": "Objective-C++",
+      "n_items": 1,
+      "train_interactions": 229
+    },
+    {
+      "language": "PowerShell",
+      "n_items": 2,
+      "train_interactions": 175
+    },
+    {
+      "language": "Julia",
+      "n_items": 2,
+      "train_interactions": 174
+    },
+    {
+      "language": "Perl",
+      "n_items": 4,
+      "train_interactions": 172
+    },
+    {
+      "language": "Lua",
+      "n_items": 3,
+      "train_interactions": 168
+    },
+    {
+      "language": "Erlang",
+      "n_items": 3,
+      "train_interactions": 144
+    },
+    {
+      "language": "Emacs Lisp",
+      "n_items": 3,
+      "train_interactions": 134
+    },
+    {
+      "language": "Common Lisp",
+      "n_items": 1,
+      "train_interactions": 91
+    },
+    {
+      "language": "Prolog",
+      "n_items": 2,
+      "train_interactions": 81
+    },
+    {
+      "language": "Groovy",
+      "n_items": 1,
+      "train_interactions": 75
+    },
+    {
+      "language": "Dart",
+      "n_items": 2,
+      "train_interactions": 73
+    },
+    {
+      "language": "Matlab",
+      "n_items": 1,
+      "train_interactions": 70
+    },
+    {
+      "language": "Nimrod",
+      "n_items": 1,
+      "train_interactions": 70
+    },
+    {
+      "language": "Vala",
+      "n_items": 1,
+      "train_interactions": 68
+    },
+    {
+      "language": "Visual Basic",
+      "n_items": 1,
+      "train_interactions": 60
+    },
+    {
+      "language": "Processing",
+      "n_items": 1,
+      "train_interactions": 56
+    },
+    {
+      "language": "F#",
+      "n_items": 1,
+      "train_interactions": 55
+    },
+    {
+      "language": "LiveScript",
+      "n_items": 1,
+      "train_interactions": 43
+    },
+    {
+      "language": "AutoHotkey",
+      "n_items": 1,
+      "train_interactions": 42
+    },
+    {
+      "language": "Racket",
+      "n_items": 1,
+      "train_interactions": 37
+    },
+    {
+      "language": "OpenEdge ABL",
+      "n_items": 1,
+      "train_interactions": 32
+    },
+    {
+      "language": "ActionScript",
+      "n_items": 1,
+      "train_interactions": 12
+    }
+  ],
+  "owners_with_multiple_items": 317,
+  "items_with_shared_owner": 898,
+  "metadata_snapshot_rule": "latest historical star-event repository snapshot strictly before training cutoff; no post-cutoff metadata or current popularity features",
+  "prior_seen_rule": "global earliest-pair deduplication makes train/validation/test user-item pairs disjoint",
+  "identity_limitations": "2014 events lack a numeric actor ID; casefolded historical login is hashed before caching. Renames can fragment a user identity.",
+  "archive_time_warning": "Historical filenames use collector-local hours; timestamps include offsets and are converted to UTC before splitting.",
+  "license_note": "GH Archive code is MIT; the event dataset is not covered by that license and may contain third-party material. This project publishes acquisition code and aggregate statistics, not raw event data or identifiers.",
+  "requirements_met": {
+    "interactions": true,
+    "users": true,
+    "items": true
+  }
+}

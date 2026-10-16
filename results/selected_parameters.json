@@ -1,0 +1,195 @@
+{
+  "primary_metric": "ndcg_at_10",
+  "seed": 42,
+  "search_spaces": {
+    "ItemKNN": [
+      {
+        "k": 25,
+        "shrinkage": 0.0
+      },
+      {
+        "k": 25,
+        "shrinkage": 10.0
+      },
+      {
+        "k": 75,
+        "shrinkage": 0.0
+      },
+      {
+        "k": 75,
+        "shrinkage": 10.0
+      },
+      {
+        "k": 150,
+        "shrinkage": 0.0
+      },
+      {
+        "k": 150,
+        "shrinkage": 10.0
+      }
+    ],
+    "iALS": [
+      {
+        "n_factors": 16,
+        "alpha": 10.0,
+        "l2": 1.0,
+        "n_iterations": 12
+      },
+      {
+        "n_factors": 16,
+        "alpha": 40.0,
+        "l2": 10.0,
+        "n_iterations": 12
+      },
+      {
+        "n_factors": 32,
+        "alpha": 10.0,
+        "l2": 1.0,
+        "n_iterations": 12
+      },
+      {
+        "n_factors": 32,
+        "alpha": 40.0,
+        "l2": 10.0,
+        "n_iterations": 12
+      }
+    ],
+    "EASE": [
+      {
+        "l2": 20.0
+      },
+      {
+        "l2": 100.0
+      },
+      {
+        "l2": 500.0
+      }
+    ],
+    "FM metadata": [
+      {
+        "n_factors": 16,
+        "learning_rate": 0.01,
+        "l2": 1e-05,
+        "epochs": 8,
+        "batch_size": 2048,
+        "negative_ratio": 3
+      },
+      {
+        "n_factors": 32,
+        "learning_rate": 0.01,
+        "l2": 1e-05,
+        "epochs": 12,
+        "batch_size": 2048,
+        "negative_ratio": 3
+      },
+      {
+        "n_factors": 32,
+        "learning_rate": 0.03,
+        "l2": 0.0001,
+        "epochs": 12,
+        "batch_size": 2048,
+        "negative_ratio": 3
+      },
+      {
+        "n_factors": 16,
+        "learning_rate": 0.03,
+        "l2": 0.0001,
+        "epochs": 16,
+        "batch_size": 2048,
+        "negative_ratio": 3
+      }
+    ],
+    "Recency iALS": [
+      {
+        "n_factors": 16,
+        "alpha": 40.0,
+        "l2": 10.0,
+        "n_iterations": 12,
+        "half_life_days": 0.5,
+        "floor": 0.25
+      },
+      {
+        "n_factors": 16,
+        "alpha": 40.0,
+        "l2": 10.0,
+        "n_iterations": 12,
+        "half_life_days": 0.5,
+        "floor": 0.75
+      },
+      {
+        "n_factors": 16,
+        "alpha": 40.0,
+        "l2": 10.0,
+        "n_iterations": 12,
+        "half_life_days": 2.0,
+        "floor": 0.25
+      },
+      {
+        "n_factors": 16,
+        "alpha": 40.0,
+        "l2": 10.0,
+        "n_iterations": 12,
+        "half_life_days": 2.0,
+        "floor": 0.75
+      },
+      {
+        "n_factors": 16,
+        "alpha": 40.0,
+        "l2": 10.0,
+        "n_iterations": 12,
+        "half_life_days": 7.0,
+        "floor": 0.25
+      },
+      {
+        "n_factors": 16,
+        "alpha": 40.0,
+        "l2": 10.0,
+        "n_iterations": 12,
+        "half_life_days": 7.0,
+        "floor": 0.75
+      }
+    ]
+  },
+  "selected": {
+    "ItemKNN": {
+      "k": 75,
+      "shrinkage": 10.0
+    },
+    "iALS": {
+      "n_factors": 16,
+      "alpha": 40.0,
+      "l2": 10.0,
+      "n_iterations": 12
+    },
+    "EASE": {
+      "l2": 500.0
+    },
+    "FM metadata": {
+      "n_factors": 32,
+      "learning_rate": 0.03,
+      "l2": 0.0001,
+      "epochs": 12,
+      "batch_size": 2048,
+      "negative_ratio": 3
+    },
+    "Recency iALS": {
+      "n_factors": 16,
+      "alpha": 40.0,
+      "l2": 10.0,
+      "n_iterations": 12,
+      "half_life_days": 2.0,
+      "floor": 0.25
+    },
+    "FM IDs only": {
+      "n_factors": 32,
+      "learning_rate": 0.03,
+      "l2": 0.0001,
+      "epochs": 12,
+      "batch_size": 2048,
+      "negative_ratio": 3
+    },
+    "Popularity": {}
+  },
+  "test_not_used_for_selection": true,
+  "tie_break": "first configuration in fixed declared order"
+}
